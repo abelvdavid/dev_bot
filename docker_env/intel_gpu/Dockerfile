@@ -31,10 +31,14 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt update \
+    && apt install -y software-properties-common
 
+RUN apt-get install -y python-pip
 
-ADD image /
-RUN pip install setuptools wheel && pip install -r /usr/lib/web/requirements.txt
+RUN apt-get install -y python3-pip
+
+RUN pip install setuptools wheel
 
 # Using Intel only http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration
 RUN \
@@ -52,8 +56,7 @@ RUN locale-gen
 RUN apt-get clean
 
 # Install the racecar simulator
-RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y \
+RUN apt-get install -y \
     ros-melodic-tf2-geometry-msgs \
     ros-melodic-ackermann-msgs \
     ros-melodic-joy \
