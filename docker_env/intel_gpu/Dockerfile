@@ -31,13 +31,7 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-# install RoboWare
-RUN aptitude install -y -q -R  wget python-pip pylint clang libxss1 libnss3 libnotify4 libxtst6 ~nlibgconf-2 \
-    && export ROBOWAREVERSION="1.1.0-1514335284"  \
-    && wget https://github.com/tonyrobotics/RoboWare/raw/master/Studio/roboware-studio_${ROBOWAREVERSION}_amd64.deb -O roboware_amd64.deb \
-    && chmod a+x roboware_amd64.deb && dpkg -i roboware_amd64.deb \
-    && apt-get install -y --no-install-recommends -f \
-    && rm -f roboware_amd64.deb
+
 
 ADD image /
 RUN pip install setuptools wheel && pip install -r /usr/lib/web/requirements.txt
