@@ -1,8 +1,8 @@
 
 Build the image
 
-docker build -t v1_dev_bot
-docker build -t kinetic:dev .
+docker build -t v1_dev_bot:melodic .
+
 ./launch_docker.sh
 
 docker run -ti --rm \

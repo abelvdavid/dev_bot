@@ -9,24 +9,23 @@ ENV ROS_DISTRO melodic
 
 RUN apt-get update \
     && apt-get install -y \
-      wget \
-      lsb-release \
-      sudo \
-      mesa-utils \
-      vlc flvstreamer ffmpeg \
-      # Install some cool programs
-      apt-get install -y \
-      vim \
-      nano \
-      gedit \
-      xterm \
-      screen \
-      tmux \
-      locales\
-      unzip \
-      curl \
-      emacs24 \
-      terminator \
+        wget \
+        lsb-release \
+        sudo \
+        mesa-utils \
+        vlc flvstreamer ffmpeg \
+        # Install some cool programs
+    && apt-get install -y \
+        vim \
+        nano \
+        gedit \
+        xterm \
+        screen \
+        tmux \
+        locales\
+        unzip \
+        curl \
+        terminator \
     && apt-get clean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
