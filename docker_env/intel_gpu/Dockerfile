@@ -26,6 +26,7 @@ RUN apt-get update \
         unzip \
         curl \
         terminator \
+        aptitude\
     && apt-get clean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
