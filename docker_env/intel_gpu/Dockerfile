@@ -1,4 +1,4 @@
-FROM osrf/ros:melodic-desktop-full
+FROM ubuntu:18.04
 
 LABEL maintainer="Abel V David <abeldavid.89@gmail.com>"
 
@@ -55,9 +55,19 @@ RUN locale-gen
 # Get gazebo binaries
 RUN apt-get clean
 
-RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'\
-&& apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 \
-&& apt-get update 
+# Add the ROS keys and package
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN mkdir ~/.gnupg
+RUN echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
+RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+# Install ROS
+RUN apt-get update
+RUN apt-get install -y ros-melodic-desktop
+
+# Set up ROS
+RUN rosdep init
+RUN rosdep update
 
 # Install the racecar simulator
 RUN apt-get install -y \
@@ -82,9 +92,8 @@ RUN adduser --gecos "ROS User" --home /home/david --disabled-password david && \
 # switch to user ros, but the workdir is still /, not /home/ros
 USER david
 
-
 # setup ROS workspace
-RUN mkdir -p catkin_ws/src
+RUN cd ~ && mkdir -p catkin_ws/src
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws/src; catkin_init_workspace'
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make'
 
