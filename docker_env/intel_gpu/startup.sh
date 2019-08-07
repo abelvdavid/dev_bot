@@ -5,6 +5,7 @@ set -e
 # setup ros environment
 source "/opt/ros/melodic/setup.bash"
 source "/home/david/catkin_ws/devel/setup.bash"
+source "/home/david/vol/lmq_ws/devel/setup.bash"
 exec "$@"
 
 
