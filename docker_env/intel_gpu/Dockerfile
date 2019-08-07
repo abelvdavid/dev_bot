@@ -94,39 +94,35 @@ RUN adduser --gecos "ROS User" --home /home/david --disabled-password david && \
 USER david
 
 # setup ROS workspace
-RUN cd ~ && mkdir -p catkin_ws/src
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws/src; catkin_init_workspace'
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make'
+RUN mkdir -p ~/catkin_ws/src
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws/src; catkin_init_workspace'
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws; catkin_make'
+
+RUN sudo apt install -y git
 
 # Clone and build the F1/10 tutorials repository
-RUN mkdir -p github/f1tenth_gtc_tutorial
-RUN git clone https://github.com/linklab-uva/f1tenth_gtc_tutorial github/f1tenth_gtc_tutorial
-RUN cp -r github/f1tenth_gtc_tutorial/src/ catkin_ws/
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
+RUN mkdir -p ~/github/f1tenth_gtc_tutorial
+RUN git clone https://github.com/linklab-uva/f1tenth_gtc_tutorial ~/github/f1tenth_gtc_tutorial
+RUN cp -r ~/github/f1tenth_gtc_tutorial/src/ ~/catkin_ws/src
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
 
 # Clone and build the MIT tutorials repository
-RUN mkdir -p github/mit_racecar
-RUN git clone https://github.com/mit-racecar/racecar_simulator.git
-RUN cp -r github/mit_racecar/src/ catkin_ws/
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
+RUN mkdir -p ~/github/mit_racecar
+RUN git clone https://github.com/mit-racecar/racecar_simulator.git ~/github/mit_racecar
+RUN cp -r ~/github/mit_racecar/ ~/catkin_ws/src
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
 
 # Clone and build the Hypha-RACECAR tutorials repository
-RUN mkdir -p github/hypha_racecar
-RUN git clone https://github.com/Hypha-ROS/hypharos_racecar.git
-RUN cp -r github/hypha_racecar/src/ catkin_ws/
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
+RUN mkdir -p ~/github/hypha_racecar
+RUN git clone https://github.com/Hypha-ROS/hypharos_racecar.git ~/github/hypha_racecar
+RUN cp -r ~/github/hypha_racecar/ ~/catkin_ws/src
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
 
-# Clone and build the Hypha-RACECAR tutorials repository
-RUN mkdir -p github/hypha_racecar
-RUN git clone https://github.com/Hypha-ROS/hypharos_racecar.git
-RUN cp -r github/hypha_racecar/src/ catkin_ws/
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
 
 # Clone and build the Hypha-MINICAR tutorials repository
-RUN mkdir -p github/hypha_minicar
-RUN git clone https://github.com/Hypha-ROS/hypharos_minicar.git
-RUN cp -r github/hypha_minicar/src/ catkin_ws/
-RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
+RUN mkdir -p ~/github/hypha_minicar
+RUN git clone https://github.com/Hypha-ROS/hypharos_minicar.git ~/github/hypha_minicar
+
 
 
 USER root
