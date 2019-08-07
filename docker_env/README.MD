@@ -1,40 +1,13 @@
 
-Build the image
+## Build the image
 
-docker build -t v1_dev_bot:melodic .
+>docker build -t v1_dev_bot:melodic .
 
-./launch_docker.sh
-
-docker run -ti --rm \
-       -e DISPLAY=$DISPLAY \
-       -v /tmp/.X11-unix:/tmp/.X11-unix \
-       firefox
-
-docker run -it --rm -p 6080:80 madhurbehl/f1tenth
+## Run the image
+>./launch_docker.sh
 
 
-sudo docker run -ti --net=host racecar/racecar
-
-
-sudo nvidia-docker run --env="DISPLAY" --env="QT_X11_NO_MITSHM=1"  \
-                       --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-                       --device=/dev/dri:/dev/dri \
-                       -it  palrobotics/tiago_simulation
-
-
-docker run -it  --privileged    \
- --security-opt label=disable      \
- --security-opt seccomp=unconfined   \
- --env="DISPLAY" --env QT_X11_NO_MITSHM=1  \
- --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
- --volume="/path/to/gazebo_models:/home/ros/.gazebo/models:rw" \
- --name="tiago-ros" \
- jacknlliu/tiago-ros:indigo terminator                
-
-
-
-
- # ros_kinetic_docker
+ # ros_melodic_docker
 
 ## TO SETUP
 

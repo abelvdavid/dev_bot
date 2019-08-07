@@ -4,7 +4,6 @@ docker run -it --net=host \
   --user=$(id -u) \
   -e DISPLAY=$DISPLAY \
   -e QT_GRAPHICSSYSTEM=native \
-  -e CONTAINER_NAME=ros-kinetic-only-dev1 \
   -e USER=$USER \
   --workdir=/home/$USER \
   -v "/tmp/.X11-unix:/tmp/.X11-unix" \
@@ -12,7 +11,7 @@ docker run -it --net=host \
   -v "/etc/passwd:/etc/passwd:ro" \
   -v "/etc/shadow:/etc/shadow:ro" \
   -v "/etc/sudoers.d:/etc/sudoers.d:ro" \
-  -v "/home/$USER/:/home/$USER/" \
+  -v "/home/$USER/Data/ignitarium/projects:/home/david/" \
   --device=/dev/dri:/dev/dri \
-  --name=ros-kinetic-only-dev1 \
-  kinetic:dev
+  --name=v1_c_sim \
+  v1_dev_bot:melodic

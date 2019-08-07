@@ -4,7 +4,7 @@ set -e
 
 # setup ros environment
 source "/opt/ros/melodic/setup.bash"
-source "/home/catkin_ws/devel/setup.bash"
+source "/home/david/catkin_ws/devel/setup.bash"
 exec "$@"
 
 
@@ -23,19 +23,8 @@ fi
 
 # Welcome message
 IP=$(hostname -I | grep -o [0-9.]* | head -1)
-printf "Welcome to the racecar docker image!"
+printf "Simulation for ENTIPIZO docker image!"
 printf "\n\n"
-printf "To use graphical programs like rviz, navigate to"
-printf "\n"
-printf "http://$IP:6080/vnc.html"
-printf "\n\n"
-printf "Alternatively, point any VNC client to"
-printf "\n"
-printf "$IP:5900"
-printf "\n\n"
-printf "For instructions on connecting to a racecar,\n"
-printf "mounting a local drive, connecting to a joystick,\n"
-printf "etc. reference /README.md\n"
-
+printf "Lets play ball\n"
 # Start a bash shell
 /bin/bash -c bash
