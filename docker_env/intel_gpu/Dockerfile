@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV ROS_DISTRO melodic
 
 RUN apt-get update \
+    && apt-get install -y --no-install-recommends --allow-unauthenticated \
     && apt-get install -y \
         wget \
         lsb-release \
@@ -60,7 +61,7 @@ RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main"
 RUN mkdir ~/.gnupg
 RUN echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
 RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
 # Install ROS
 RUN apt-get update
 RUN apt-get install -y ros-melodic-desktop
