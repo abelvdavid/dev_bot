@@ -119,7 +119,7 @@ RUN git clone https://github.com/Hypha-ROS/hypharos_minicar.git /home/david/gith
 
 RUN mkdir -p /home/david/vol/lmq_ws/src
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/vol/lmq_ws/src; catkin_init_workspace'
-RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/vol/lmq_ws/src; catkin_make'
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/vol/lmq_ws; catkin_make'
 
 # Copy in config files
 COPY ./config/bash.bashrc /etc/
