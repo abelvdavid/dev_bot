@@ -60,3 +60,12 @@ docker attach <container name>
 
 docker start -ai <container name>
 
+## TO DO
+
+# set user ros and sudo
+RUN adduser --gecos "ROS User" --home /home/ros --disabled-password ros && \
+    usermod -a -G dialout ros && \
+    echo "ros ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/99_aptget
+
+# switch to user ros, but the workdir is still /, not /home/ros
+USER ros
