@@ -6,4 +6,4 @@ source "/opt/ros/melodic/setup.bash"
 #source "/home/david/catkin_ws/devel/setup.bash"
 
 # Go to the racecar_ws
-cd /catkin_ws
+cd /home/david/catkin_ws
