@@ -1,7 +1,7 @@
 
 ## Build the image
 
->sudo docker build -t v1_dev_bot:melodic .
+>sudo docker build -t f110sim:kinetic .
 
 ## Run the image
 >./launch_docker.sh

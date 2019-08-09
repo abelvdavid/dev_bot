@@ -3,10 +3,9 @@
 set -e
 
 # setup ros environment
-source "/opt/ros/melodic/setup.bash"
-source "/home/david/catkin_ws/devel/setup.bash"
+source "/opt/ros/$ROS_DISTRO/setup.bash"
+source "/home/catkin_ws/devel/setup.bash"
 exec "$@"
-
 
 # If the car number is set, set up ROS hostnames
 if [ -n "$1" ]; then
@@ -23,7 +22,7 @@ fi
 
 # Welcome message
 IP=$(hostname -I | grep -o [0-9.]* | head -1)
-printf "Simulation for ENTIPIZO docker image!"
+printf "Simulation for F1/10 docker image!"
 printf "\n\n"
 printf "Lets play ball\n"
 # Start a bash shell

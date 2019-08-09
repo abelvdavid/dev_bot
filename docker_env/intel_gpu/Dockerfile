@@ -96,8 +96,8 @@ RUN sudo apt install -y git
 
 # Clone and build the F1/10 tutorials repository
 RUN mkdir -p /home/david/github/f1tenth_gtc_tutorial
-RUN git clone https://github.com/linklab-uva/f1tenth_gtc_tutorial /home/david/github/f1tenth_gtc_tutorial
-RUN cp -r /home/david/github/f1tenth_gtc_tutorial/src/ /home/david/catkin_ws/src
+RUN git clone https://github.com/linklab-uva/f1tenth_gtc_tutorial /home/david/github/f1tenth_racecar
+RUN cp -r /home/david/github/f1tenth_racecar/ /home/david/catkin_ws/src
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/david/catkin_ws; catkin_make install'
 
 # Clone and build the MIT tutorials repository
