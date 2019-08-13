@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install/include
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install/lib -lserial -lrt -lpthread
+Requires: 

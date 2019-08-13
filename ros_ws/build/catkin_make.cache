@@ -1,0 +1,2 @@
+ackermann_msgs:f1_10_sim/race:racecar-simulator/racecar_control:racecar-simulator/racecar_description:racecar-simulator/racecar_gazebo:racecar/ackermann_cmd_mux:racecar/racecar:serial:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs
+-DCATKIN_DEVEL_PREFIX=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install -G Unix Makefiles

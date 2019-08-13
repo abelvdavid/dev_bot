@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install
+
+Name: race
+Description: Description of race
+Version: 0.0.0
+Cflags: -I/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install/include
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/install/lib 
+Requires: roscpp rospy sensor_msgs std_msgs geometry_msgs
