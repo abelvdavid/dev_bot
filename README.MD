@@ -14,7 +14,7 @@ cd ..
 catkin_make install
 
 
-echo "source ~/Desktop/sims_ws/devel/setup.bash" >> ~/.bashrc
+echo "source ~/Data/ignitarium/projects/robotics/dev_bot_v1/ros_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 
@@ -22,5 +22,5 @@ sudo apt-get install ros-kinetic-ros-control ros-kinetic-gazebo-ros-control ros-
 
 
 roscore
-roslaunch race f1_tenth.launch
+
 
