@@ -5,6 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(carbot/carbot_description)
+subdirs(carbot/carbot_gazebo)
+subdirs(carbot/carbot_gazebo_control)
 subdirs(racecar/racecar)
 subdirs(racecar-simulator/racecar_control)
 subdirs(racecar-simulator/racecar_description)
@@ -12,7 +15,7 @@ subdirs(serial)
 subdirs(ackermann_msgs)
 subdirs(vesc/vesc)
 subdirs(vesc/vesc_msgs)
-subdirs(dev_bot_urdf)
+subdirs(carbot/carbot_control)
 subdirs(racecar/ackermann_cmd_mux)
 subdirs(f1_10_sim/race)
 subdirs(racecar-simulator/racecar_gazebo)

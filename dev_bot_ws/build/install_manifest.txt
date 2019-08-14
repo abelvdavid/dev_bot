@@ -7,7 +7,11 @@
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/setup.zsh
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/local_setup.zsh
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/.rosinstall
-/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib/pkgconfig/dev_bot_urdf.pc
-/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_urdf/cmake/dev_bot_urdfConfig.cmake
-/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_urdf/cmake/dev_bot_urdfConfig-version.cmake
-/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_urdf/package.xml
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib/pkgconfig/racecar_control.pc
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_control/cmake/racecar_controlConfig.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_control/cmake/racecar_controlConfig-version.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_control/package.xml
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib/pkgconfig/racecar_description.pc
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/cmake/racecar_descriptionConfig.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/cmake/racecar_descriptionConfig-version.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/package.xml

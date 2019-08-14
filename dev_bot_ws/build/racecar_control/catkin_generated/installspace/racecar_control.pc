@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install
+
+Name: racecar_control
+Description: Description of racecar_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib 
+Requires: 

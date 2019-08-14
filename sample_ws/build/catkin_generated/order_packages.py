@@ -2,4 +2,4 @@
 source_root_dir = "/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel;/opt/ros/kinetic".split(';') if "/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []
