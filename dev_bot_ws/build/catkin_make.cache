@@ -1,0 +1,2 @@
+dev_bot_urdf
+-DCATKIN_DEVEL_PREFIX=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install -G Unix Makefiles

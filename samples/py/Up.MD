@@ -17,6 +17,8 @@ cd PythonRobotics/
 Install the required libraries. You can use environment.yml with conda command.
 conda env create -f environment.yml
 
+conda config --set auto_activate_base false
+
 Execute python script in each directory.
 
 Add star to this repo if you like it smiley.

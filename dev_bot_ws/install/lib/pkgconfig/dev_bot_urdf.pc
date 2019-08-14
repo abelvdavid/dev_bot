@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install
+
+Name: dev_bot_urdf
+Description: Description of dev_bot_urdf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib 
+Requires: 

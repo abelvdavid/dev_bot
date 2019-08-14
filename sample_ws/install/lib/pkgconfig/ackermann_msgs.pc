@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/install
+
+Name: ackermann_msgs
+Description: Description of ackermann_msgs
+Version: 1.0.1
+Cflags: -I/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/install/include -I/usr/include
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/install/lib 
+Requires: message_runtime std_msgs
