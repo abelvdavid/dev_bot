@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: autorally_gazebo
+Version: 0.2.5
+Summary: autorally_gazebo is used with Gazebo to simulate the AutoRally
+    platform. This package was adapted from ackermann_vehicle_gazebo.
+Home-page: http://autorally.github.io
+Author: Brian Goldfain
+Author-email: bgoldfain3@gatech.edu
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: std_msgs
+Requires: nav_msgs
+Requires: rospy
+Requires: autorally_msgs

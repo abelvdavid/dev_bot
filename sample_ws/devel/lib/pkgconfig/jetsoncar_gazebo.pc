@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel
+
+Name: jetsoncar_gazebo
+Description: Description of jetsoncar_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel/lib 
+Requires: 

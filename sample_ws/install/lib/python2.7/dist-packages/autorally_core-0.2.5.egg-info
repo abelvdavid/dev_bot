@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: autorally_core
+Version: 0.2.5
+Summary: All core software (code specific to hardware on the robot) created for the autorally project resides here
+Home-page: http://autorally.github.io
+Author: Brian Goldfain
+Author-email: bgoldfain3@gatech.edu
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: std_msgs
+Requires: rospy
+Requires: autorally_msgs

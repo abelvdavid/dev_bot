@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/install
+
+Name: autorally_util
+Description: Description of autorally_util
+Version: 0.2.5
+Cflags: 
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/install/lib 
+Requires: 

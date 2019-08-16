@@ -56,6 +56,28 @@ CMAKE_BINARY_DIR = /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -78,26 +100,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -110,28 +122,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule:
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
+.PHONY : vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_lisp: vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+vesc_ackermann_nodelet: vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
 
-.PHONY : nav_msgs_generate_messages_lisp
+.PHONY : vesc_ackermann_nodelet
 
 # fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
+vesc_ackermann_nodelet/fast:
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build
+.PHONY : vesc_ackermann_nodelet/fast
 
 # Convenience name for target.
 vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule:
@@ -210,89 +210,14 @@ ackermann_to_vesc_node/fast:
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build
 .PHONY : ackermann_to_vesc_node/fast
 
-# Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make vesc/vesc_ackermann/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
-.PHONY : vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
-
-# Convenience name for target.
-vesc_ackermann_nodelet: vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
-
-.PHONY : vesc_ackermann_nodelet
-
-# fast build rule for target.
-vesc_ackermann_nodelet/fast:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build
-.PHONY : vesc_ackermann_nodelet/fast
-
 src/ackermann_to_vesc.o: src/ackermann_to_vesc.cpp.o
 
 .PHONY : src/ackermann_to_vesc.o
 
 # target to build an object file
 src/ackermann_to_vesc.cpp.o:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.o
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o
 .PHONY : src/ackermann_to_vesc.cpp.o
 
 src/ackermann_to_vesc.i: src/ackermann_to_vesc.cpp.i
@@ -301,8 +226,8 @@ src/ackermann_to_vesc.i: src/ackermann_to_vesc.cpp.i
 
 # target to preprocess a source file
 src/ackermann_to_vesc.cpp.i:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.i
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.i
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.i
 .PHONY : src/ackermann_to_vesc.cpp.i
 
 src/ackermann_to_vesc.s: src/ackermann_to_vesc.cpp.s
@@ -311,8 +236,8 @@ src/ackermann_to_vesc.s: src/ackermann_to_vesc.cpp.s
 
 # target to generate assembly for a file
 src/ackermann_to_vesc.cpp.s:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.s
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.s
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.s
 .PHONY : src/ackermann_to_vesc.cpp.s
 
 src/ackermann_to_vesc_node.o: src/ackermann_to_vesc_node.cpp.o
@@ -375,8 +300,8 @@ src/vesc_to_odom.o: src/vesc_to_odom.cpp.o
 
 # target to build an object file
 src/vesc_to_odom.cpp.o:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.o
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o
 .PHONY : src/vesc_to_odom.cpp.o
 
 src/vesc_to_odom.i: src/vesc_to_odom.cpp.i
@@ -385,8 +310,8 @@ src/vesc_to_odom.i: src/vesc_to_odom.cpp.i
 
 # target to preprocess a source file
 src/vesc_to_odom.cpp.i:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.i
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.i
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.i
 .PHONY : src/vesc_to_odom.cpp.i
 
 src/vesc_to_odom.s: src/vesc_to_odom.cpp.s
@@ -395,8 +320,8 @@ src/vesc_to_odom.s: src/vesc_to_odom.cpp.s
 
 # target to generate assembly for a file
 src/vesc_to_odom.cpp.s:
-	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.s
 	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.s
+	cd /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.s
 .PHONY : src/vesc_to_odom.cpp.s
 
 src/vesc_to_odom_node.o: src/vesc_to_odom_node.cpp.o
@@ -459,21 +384,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... test"
+	@echo "... vesc_ackermann_nodelet"
+	@echo "... install/local"
 	@echo "... vesc_to_odom_node"
-	@echo "... list_install_components"
 	@echo "... ackermann_to_vesc_node"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... test"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... install"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... vesc_ackermann_nodelet"
 	@echo "... src/ackermann_to_vesc.o"
 	@echo "... src/ackermann_to_vesc.i"
 	@echo "... src/ackermann_to_vesc.s"

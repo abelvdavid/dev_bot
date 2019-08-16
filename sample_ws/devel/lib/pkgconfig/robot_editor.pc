@@ -1,0 +1,8 @@
+prefix=/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel
+
+Name: robot_editor
+Description: Description of robot_editor
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/sample_ws/devel/lib 
+Requires: 
