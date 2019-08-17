@@ -128,6 +128,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/build/gtest/cmake_install.cmake")
   include("/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/build/racecar_control/cmake_install.cmake")
   include("/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/build/racecar_description/cmake_install.cmake")
+  include("/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/build/dev_bot_v1/dev_bot_description/cmake_install.cmake")
 
 endif()
 

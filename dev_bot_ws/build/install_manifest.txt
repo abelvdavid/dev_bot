@@ -15,3 +15,7 @@
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/cmake/racecar_descriptionConfig.cmake
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/cmake/racecar_descriptionConfig-version.cmake
 /home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/racecar_description/package.xml
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/lib/pkgconfig/dev_bot_description.pc
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_description/cmake/dev_bot_descriptionConfig.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_description/cmake/dev_bot_descriptionConfig-version.cmake
+/home/abeldavid/Data/ignitarium/projects/robotics/dev_bot_v1/dev_bot_ws/install/share/dev_bot_description/package.xml

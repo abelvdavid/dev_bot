@@ -7,3 +7,4 @@
 subdirs(gtest)
 subdirs(racecar_control)
 subdirs(racecar_description)
+subdirs(dev_bot_v1/dev_bot_description)
