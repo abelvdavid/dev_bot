@@ -11,4 +11,65 @@ Build a ESC for a DC Motor
 
 
 ## Questions to get an answer for??
-a. ?
+a. A Direct Model in Simulink / Matlab
+http://ctms.engin.umich.edu/CTMS/index.php?aux=Home
+https://in.mathworks.com/company/newsletters/articles/motor-control-with-arduino-a-case-study-in-data-driven-modeling-and-control-design.html
+https://in.mathworks.com/videos/using-matlab-and-arduino-for-motor-control-100737.html
+https://www.youtube.com/watch?v=EP1rsGYHOh0&list=PLnfr5me4laRfAP01ecxGRPx42hwG-qJ3v
+
+
+
+
+Not Required
+A. Matlab
+I.Projects
+a. Matlab and Cpp
+https://in.mathworks.com/videos/series/integrating-matlab-and-c-108187.html
+b. Matlab and Racecar
+https://in.mathworks.com/videos/series/student-teams-share-their-keys-to-success-101105.html
+https://in.mathworks.com/videos/series/improving-your-racecar-development-101027.html
+c. Ardunio and RC Remote Interface Simulink
+https://in.mathworks.com/videos/using-an-rc-controller-with-arduino-and-simulink-91738.html
+d. Case Study ADAS - Desigining and Tunining a vehicle Controller
+https://in.mathworks.com/videos/real-time-control-prototyping-of-driver-assistance-and-autonomous-driving-technologies-at-mobileye-105939.html
+https://in.mathworks.com/videos/deploying-controls-for-a-self-driving-taxi-1527492849537.html
+https://in.mathworks.com/videos/tata-motors-autonomous-vehicle-function-development-and-testing-1541057562893.html
+https://in.mathworks.com/videos/gpu-supported-real-time-sensor-modeling-for-adas-development-in-simulink-123432.html
+
+e. Driver-in-loop System
+https://in.mathworks.com/videos/building-real-time-driver-in-the-loop-simulators-1542313377351.html
+f.DC Motor Speed using PWM
+https://in.mathworks.com/videos/speed-control-of-a-dc-motor-using-pwm-68962.html
+g. VEX Robotics & Robotics Arena
+https://in.mathworks.com/videos/series/Getting_Started_with_VEX_Robotics_Using_MATLAB_and_Simulink.html
+https://in.mathworks.com/videos/series/matlab-and-simulink-robotics-arena.html
+h. Build Anything Autonomous
+https://in.mathworks.com/videos/search.html?q=How+to+Build+an+Autonomous+Anything&page=1
+i. BLDC Motor Control
+https://in.mathworks.com/videos/series/brushless-dc-motors.html
+
+
+II.Control System with Matlab Implementation
+a. TF in Simulink
+https://in.mathworks.com/videos/transfer-functions-in-simulink-part-1-creating-and-using-transfer-functions-106146.html
+b. StateSpace Models in Matlab
+https://in.mathworks.com/videos/series/state-space-models-100817.html
+c. Understanding Bode Plots with DC Motor Control 
+https://in.mathworks.com/videos/series/using-bode-plots-95148.html
+d. Brain Douglas->State Space/ PID/ Sensor Fusion/Linearization
+https://in.mathworks.com/videos/search.html?q=Brian+Douglas&fq=marketing-application:control-systems&page=1
+e. Data Driven Control (System Identification)
+https://in.mathworks.com/videos/pid-controller-tuning-based-on-measured-input-output-data-89348.html
+https://in.mathworks.com/videos/series/data-driven-control-95931.html
+https://in.mathworks.com/videos/integrating-measured-data-with-simulations-for-automated-model-calibration-81970.html
+https://in.mathworks.com/videos/search.html?q=Lennart+Ljung&page=1
+f. PID and MPC for robotics systems
+https://in.mathworks.com/videos/developing-multivariable-control-systems-for-robotics-81954.html
+g. Arkadiy Turevskiy Videos
+https://in.mathworks.com/videos/search.html?q=Arkadiy+Turevskiy&page=1
+h. MBD
+https://in.mathworks.com/videos/accelerating-the-pace-and-scope-of-control-system-design-1493659266810.html
+i. Embed 
+https://in.mathworks.com/videos/arduino-and-beyond-embedding-matlab-and-simulink-algorithms-on-hardware-1513869148145.html
+j. Auto Tuning
+https://in.mathworks.com/videos/automatic-tuning-of-multi-loop-dc-motor-controller-91844.html
