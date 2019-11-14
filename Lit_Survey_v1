@@ -1,26 +1,35 @@
 
 ## Keywords
 
-Matlab , ESC , DC Motor , Ardunio , Model Based Design
+Matlab ,Simulation, Modeling , Model Based Design
 
 
 
 ## Aim
 
-Build a ESC for a DC Motor
+Build a Simulation based on Matlab
+
+## Toolbox needed ( Main - https://in.mathworks.com/solutions/automotive/automated-driving.html)
+a. Automated Driving Toolbox
+https://in.mathworks.com/products/automated-driving.html
+b. Sensor Fusion and Tracking Toolbox
+https://in.mathworks.com/products/sensor-fusion-and-tracking.html
+c. Model Predictive Control Toolbox
+https://in.mathworks.com/products/mpc.html
+d. Vehicle Dynamics Blockset
+https://in.mathworks.com/products/vehicle-dynamics.html
+e. ROS Toolbox
+https://in.mathworks.com/products/ros.html
+f. Navigation Toolbox
+https://in.mathworks.com/products/navigation.html
+
+## Simulator External
+a. http://opendrive.org/
 
 
-## Questions to get an answer for??
-a. A Direct Model in Simulink / Matlab
-https://in.mathworks.com/videos/control-design-made-easy-93052.html
-http://ctms.engin.umich.edu/CTMS/index.php?aux=Home
-https://in.mathworks.com/company/newsletters/articles/motor-control-with-arduino-a-case-study-in-data-driven-modeling-and-control-design.html
-https://www.youtube.com/watch?v=EP1rsGYHOh0&list=PLnfr5me4laRfAP01ecxGRPx42hwG-qJ3v
-
-
-
-
+--------------------------
 Not Required
+--------------------------
 A. Matlab
 I.Projects
 a. Matlab and Cpp
