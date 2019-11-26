@@ -1,0 +1,17 @@
+# Create a Plant Model for the DC Motor
+
+## Step-1 Identifying the Type of Wound
+
+The type of plant model that needs to be build for the DC Motor is taken from the below reference;
+
+Brushed DC motors are constructed with wound rotors and either wound or permanent-magnet stators.
+
+### Permanent-magnet motors
+Permanent-magnet types have some performance advantages over direct-current, excited, synchronous types, and have become predominant in fractional horsepower applications.
+They are smaller, lighter, more efficient and reliable than other singly-fed electric machines.[2]
+
+Originally all large industrial DC motors used wound field or rotor magnets.
+Permanent magnets have traditionally only been useful on small motors because it was difficult to find a material capable of retaining a high-strength field.
+Only recently have advances in materials technology allowed the creation of high-intensity permanent magnets, such as neodymium magnets, allowing the development of compact, high-power motors without the extra real-estate of field coils and excitation means. 
+But as these high performance permanent magnets become more applied in electric motor or generator systems, other problems are realized (see Permanent magnet synchronous generator).
+
